@@ -1,0 +1,26 @@
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width:  100%;
+    position: fixed;
+    margin:0;
+    padding: 0;
+
+    font-size:12rem;
+    user-select: none;
+}
+
+@media (max-width: 800px) {
+    .clock {
+        font-size:6rem;
+    }
+  }
+
+@media (max-width: 800px) {
+    .clock {
+        font-size:3rem;
+    }
+  }

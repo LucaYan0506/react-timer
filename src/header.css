@@ -1,0 +1,14 @@
+header{
+    margin:0;
+    position: relative;
+    width: auto;
+    user-select: none;
+}
+
+header button{
+    width: auto;
+    margin:10px;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(71, 71, 209);
+}
