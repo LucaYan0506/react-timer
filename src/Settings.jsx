@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import styles from "./settings.module.css"
+import TestButton from "./TestButton";
 
 function Settings(props){
     const setting = useRef(null)
@@ -33,6 +34,7 @@ function Settings(props){
                              <input style={{width:"40px",margin:"0 2px"}} type="number" name="" id="" defaultValue={props.interval} onChange={(e) => changeInterval(e)}/> 
                         second</p>
                 </div>
+                <TestButton></TestButton>
             </div>)
     else
         return (<></>)
