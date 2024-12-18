@@ -24,7 +24,7 @@ function Settings(props){
                 <div className={styles.container}>
                     <h1>Settings</h1>
                     <h3 className={styles.sound}>Sound</h3> 
-                    <p className={styles.description}>Enable/disable a reminder (beep sound) every ${props.interval} seconds</p>
+                    <p className={styles.description}>Enable/disable a reminder (beep sound) every {props.interval} seconds</p>
                     <label className={styles.switch}>
                         <input type="checkbox" onChange={changeSound} checked={props.soundOn}/>
                         <span className={styles.slider}></span>

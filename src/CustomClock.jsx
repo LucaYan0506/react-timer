@@ -34,7 +34,9 @@ function CustomClock(props){
     }, [centiSeconds]);
 
     useEffect(() => {
-        if (props.soundOn && seconds > 0 && seconds % props.interval == 0)
+        if (minutes == 0 && seconds == 0 && centiSeconds == 0)
+            return;
+        if (props.soundOn && seconds % props.interval == 0)
             mutipleBeep(2);
     }, [seconds]);
 
