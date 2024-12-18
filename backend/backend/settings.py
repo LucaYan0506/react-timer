@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'api',
-    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -128,6 +128,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173", 
+    "http://192.168.0.13:5173",
     'https://lucayan0506.github.io',
     "https://pythoanyhwere.com",
 ]
@@ -136,9 +137,11 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",  # Ensure this is correctly added
+    "http://localhost:5173", 
+    "http://192.168.0.13:5173",
+
 ]
 
-# Allow CSRF cookie to be set in the frontend
-CSRF_COOKIE_HTTPONLY = False  # Let JavaScript access the CSRF cookie
-CSRF_COOKIE_SECURE = False    # Set this to True in production if using HTTPS
+# CSRF_COOKIE_HTTPONLY = True  # Let JavaScript access the CSRF cookie
+CSRF_COOKIE_SECURE = True    # Set this to True in production if using HTTPS
+CSRF_COOKIE_SAMESITE = "None"    # Allow cross-site requests
