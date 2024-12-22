@@ -11,7 +11,6 @@ async function getCSRFToken() {
   return data['token']; 
 }
 
-  
   // Function to send POST request
   async function sendPostRequest() {
     const url = "http://127.0.0.1:8000/test"; 
@@ -28,24 +27,23 @@ async function getCSRFToken() {
       body: formData
   })
 
-
   }
   
 
   
-function TestButton(){
+function UpdateSetting(){
     async function test(){
         // const csrfToken = await getCSRFToken();
         // alert(csrfToken);
         sendPostRequest();
     }
 
-    return (<button onClick={() => test()}>
-        test
+    return (<button style={{marginTop:"10px"}} onClick={() => test()}>
+        Update Setting
     </button>)
 }
 
 
 
 
-export default TestButton
+export default UpdateSetting
