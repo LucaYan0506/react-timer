@@ -12,3 +12,12 @@ header button{
     z-index: 2;
     background-color: rgb(71, 71, 209);
 }
+
+header #profile{
+    float: inline-end;
+    margin:10px;
+    width: 65px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}

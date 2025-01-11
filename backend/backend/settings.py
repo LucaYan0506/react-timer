@@ -126,22 +126,22 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173", 
-    "http://192.168.0.13:5173",
-    'https://lucayan0506.github.io',
-    "https://pythoanyhwere.com",
-]
+CSRF_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = True
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173']
 
-# Allow sending credentials with requests (cookies, etc.)
+# PROD ONLY
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+    'http://127.0.0.1:5173',
+]
+CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173", 
-    "http://192.168.0.13:5173",
-
-]
-
-# CSRF_COOKIE_HTTPONLY = True  # Let JavaScript access the CSRF cookie
-CSRF_COOKIE_SECURE = True    # Set this to True in production if using HTTPS
-CSRF_COOKIE_SAMESITE = "None"    # Allow cross-site requests
+LOGIN_URL='admin/login'
+LOGIN_REDIRECT_URL=''

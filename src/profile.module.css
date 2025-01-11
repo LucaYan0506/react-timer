@@ -1,0 +1,54 @@
+.profile {
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.profile .container{
+    width: 900px;
+    height: 600px;
+    background-color: rgb(184, 184, 184);
+    color:black;
+    position: relative;
+    z-index: 10;   
+    padding:25px;
+    border-radius: 15px;
+}
+
+.profile .container h1{
+    margin:0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.profile .container .description{
+    content: attr(data-content);
+    font-size: smaller;
+    font-weight: 400;
+    color:rgb(82, 82, 82);
+    margin-top: 0;
+}
+
+.profile .container .form-group{
+    padding:5px 0;
+}
+
+.profile .container .form-control{
+    display: block;
+    width: calc(100% - 20px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
